@@ -1,0 +1,178 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    padding: 40px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 1rem 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* --------- Sections ----------- */
+
+section {
+    width: 33%;
+    margin: 10px;
+    text-align: center;
+}
+
+section:first-child {
+    margin-left: 0;
+}
+section:last-child {
+    margin-right: 0;
+}
+
+.section__header--green {
+    background-color: rgb(99, 189, 99);
+}
+
+.section__header--orange {
+    background-color: rgb(241, 203, 95);
+}
+
+.section__header--red {
+    background-color: rgb(241, 134, 134);
+}
+
+#section-todo {
+    background-color: rgb(149, 192, 149);
+}
+
+#section-inProgress {
+    background-color: rgb(245, 225, 170);
+}
+
+#section-done {
+    background-color: rgb(238, 174, 174);
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+/* --------- Drag And Drop ----------- */
+
+.dragging {
+    border: 5px solid rgb(247, 144, 144);
+    padding: 5px;
+}
+
+/* --------- Filters ----------- */
+
+.date-selector {
+    margin: 2rem 0;
+}
+
+.checkboxes-card {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-item {
+    margin: 0 1rem 0 0;
+}
+
+/* --------- Task Items ----------- */
+
+.tasks {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.task-item {
+    position: relative;
+    /* background-color: rgb(214, 214, 214); */
+    width: 120px;
+    min-height: 140px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.task-description {
+    font-size: 0.7rem;
+    display: none;
+}
+
+.task-description--active {
+    display: block;
+}
+
+.task-name {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1480px) {
+    body {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    body {
+        padding: 0;
+    }
+
+    h1 {
+        margin: 1rem 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    section {
+        margin: 5px;
+    }
+
+    .task-item {
+        width: 90px;
+        min-height: 125px;
+        font-size: 0.7rem;
+        padding: 3px;
+        margin: 3px;
+    }
+
+    .task-name {
+        font-size: 0.9rem;
+    }
+
+    .checkboxes-card {
+        justify-content: space-between;
+    }
+
+    .date-selector {
+        margin: 1rem 0;
+    }
+}

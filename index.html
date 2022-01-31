@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Application</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&family=Roboto:wght@100;300;400;700&family=Turret+Road:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Task Application</h1>
+    </header>
+    <template id="single-task">
+      <li draggable="true" class="draggable">
+        <div class="task-item">
+          <p class="task-time"></p>
+          <h3 class="task-name"></h3>
+          <p class="task-description"></p>
+          <p class="task-category"></p>
+          <div class="folded-corner"></div>
+        </div>
+      </li>
+    </template>
+    <label for="date">Order by Date</label>
+    <select class="date-selector" name="date" id="date">
+      <option value="">Choose an option</option>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+    <div class="checkboxes-card">
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="wagon"
+          class="checkbox-item"
+          name="filter"
+          value="Wagon"
+        />
+        <label for="wagon">Wagon</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="crewCabPickup"
+          class="checkbox-item"
+          name="filter"
+          value="Crew Cab Pickup"
+        />
+        <label for="crewCabPickup">Crew Cab Pickup</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="SUV"
+          class="checkbox-item"
+          name="filter"
+          value="SUV"
+        />
+        <label for="SUV">SUV</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="extendedCabPickup"
+          class="checkbox-item"
+          name="filter"
+          value="Extended Cab Pickup"
+        />
+        <label for="extendedCabPickup">Extended Cab Pickup</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="minivan"
+          class="checkbox-item"
+          name="filter"
+          value="Minivan"
+        />
+        <label for="minivan">Minivan</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="hatchback"
+          class="checkbox-item"
+          name="filter"
+          value="Hatchback"
+        />
+        <label for="hatchback">Hatchback</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="cargoVan"
+          class="checkbox-item"
+          name="filter"
+          value="Cargo Van"
+        />
+        <label for="cargoVan">Cargo Van</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="convertible"
+          class="checkbox-item"
+          name="filter"
+          value="Convertible"
+        />
+        <label for="convertible">Convertible</label>
+      </div>
+      <div class="checkbox-item">
+        <input
+          type="checkbox"
+          id="coupe"
+          class="checkbox-item"
+          name="filter"
+          value="Coupe"
+        />
+        <label for="coupe">Coupe</label>
+      </div>
+    </div>
+    <div class="wrapper">
+      <section id="section-todo" class="container">
+        <header>
+          <h2 class="section__header--green">TODO</h2>
+        </header>
+        <ul class="tasks" id="tasksToDo"></ul>
+      </section>
+      <section id="section-inProgress" class="container">
+        <header>
+          <h2 class="section__header--orange">IN PROGRESS</h2>
+        </header>
+        <ul class="tasks" id="tasksInProgress"></ul>
+      </section>
+      <section id="section-done" class="container">
+        <header>
+          <h2 class="section__header--red">DONE</h2>
+        </header>
+        <ul class="tasks" id="tasksDone"></ul>
+      </section>
+    </div>
+  </body>
+</html>
